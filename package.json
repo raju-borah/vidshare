@@ -1,0 +1,23 @@
+{
+  "name": "vidshare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raju-borah/vidshare.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raju-borah/vidshare/issues"
+  },
+  "homepage": "https://github.com/raju-borah/vidshare#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "sass": "^1.21.0"
+  }
+}
