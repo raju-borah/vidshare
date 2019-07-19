@@ -1,0 +1,197 @@
+/* for button */
+/*
+border-radius for curved end of button
+*/
+
+.btn {
+  font-size: 1.9rem;
+  background-color: $color-grey-light-2;
+  font-family: 'Averia Serif Libre';
+
+  @include respond(phone){
+  font-size: 1.5rem;
+
+  }
+  // dashboard
+  &--trans{
+    font-size: 2.5rem;
+    background: transparent;
+
+    &:hover{
+      color: $color-tertiary-light;
+    }
+    &:hover ~ .list--option{
+      display: block;
+    }
+  }
+
+  // for comment
+  &--comment {
+    border-radius: 2rem;
+    font-size: 2rem;
+    background: transparent;
+    background-color: $color-tertiary-dark-1;
+    color: $color-white;
+    padding: 0.99rem;
+    &-1 {
+      font-size: 0.99rem;
+      float: right;
+      right: 2rem;
+    }
+  }
+
+  &,
+  &:link,
+  &:visited {
+    // setting textdecoratio none
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    // change for button
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  &--white {
+    border-radius: 4rem;
+    font-size: 1.7rem;
+    display: inline-block;
+    padding: 0.31rem;
+    color: $color-black;
+    padding: 0.68rem;
+    background-image: linear-gradient(to right, rgba($color-grey-dark-3, 0.29), rgba($color-tertiary-dark-1, 0.33));
+    // when the btn--white is hovered
+    &:hover {
+      background-image: none;
+      background-color: $color-grey-dark-2;
+    }
+    @include respond(phone) {
+      font-size: 17px;
+    }
+  }
+  // button green
+  &--green {
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin: 1rem;
+    display: block;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    padding: 1rem;
+    @include respond(phone) {
+      font-size: 20.5px;
+    }
+    // for login
+    &--login {
+      border-radius: 4rem;
+      padding: 1.2rem;
+      background-color: $color-tertiary-light;
+      position: relative;
+      margin-top: 2rem;
+      left: 14%;
+      width: 70%;
+    }
+
+    // for logout
+    &--logout {
+      font-size: 1.8rem;
+      font-weight: 200;
+      margin-left: 10rem;
+      @include respond(phone){
+        font-size: 18px;
+        margin-left: 7rem;
+            
+            }
+    }
+  }
+  &--blue {
+    border-radius: 4rem;
+    font-size: 2.5rem;
+    margin: 2rem;
+    display: block;
+    background-color: $color-tertiary-dark;
+    color: $color-white;
+    padding: 1rem;
+    width: 15rem;
+    @include respond(phone) {
+      font-size: 22px;
+    }
+  }
+  &--front {
+    background-color: $color-tertiary-dark-2;
+    display: inline-block;
+    width: 10rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem;
+    color: $color-white;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+
+    @include respond(phone){
+      font-size: 18px;
+      margin-left: 1rem;
+      width: 7.5rem;
+          
+          }
+  }
+
+  // upload button
+  &--upload {
+    width: 15rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: 0.2rem solid $color-black;
+    background-color: $color-tertiary-light;
+    color: $color-white;
+    font-size: 1.6rem;
+  }
+
+  &--addvideo{
+    background-color: $color-tertiary-dark-2;
+    color: $color-white;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  /* button hover */
+  &:hover {
+    /* shadow when hover */
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    /* for moving up */
+    transform: translateY(-0.3rem);
+    &::after {
+      transform: scaleX(1.1) scaleY(1.2);
+      opacity: 0;
+    }
+  }
+
+  /* when clicked */
+  &:active,
+  &:focus {
+    /* for shadow to loook closer */
+    text-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    outline: none;
+    /* for moving down */
+    transform: translateY(-0.01rem);
+  }
+}
+
+.btnlist{
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 450;
+  padding: 1rem;
+  text-align: start;
+  font-family: 'Averia Serif Libre';
+
+  &--btn{
+    width: 100%;
+  }
+}

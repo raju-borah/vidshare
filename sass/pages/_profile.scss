@@ -1,0 +1,846 @@
+.editpanel {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 80px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  
+    @include respond(phone){
+        padding-top: 70px;
+    }
+
+    &_drop
+  {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 3rem;
+    @include respond(phone){
+        width: 100%;
+        margin-bottom: 1rem;
+}
+
+&--item{
+    font-size: 14px;
+    @include respond(phone){
+        font-size: 10px;
+}
+
+}
+
+
+  }
+  
+  /* Modal Content */
+  &_content {
+    background-color: #fefefe;
+    margin: auto;
+   
+    border: 6px solid rgba(9, 109, 223, 0.692);
+    width: 60%;
+    height: 97%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding-left:6%;
+    padding-right:6%;
+    font-size: 20px;
+    line-height: 3rem;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+                      
+    @include respond(phone){
+        width: 90%;
+        height: 85%;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding-left:5%;
+        padding-right:5%;
+        padding-bottom: 4%;
+        font-size: 16px;
+        border: 2px solid rgba(9, 109, 223, 0.692);
+        line-height: 1.8rem;
+
+    
+    }
+
+    &--icon
+    {
+            text-align: center;
+            position: relative;
+            font-size: 3rem;
+            border-radius: 50%;
+            background-color: #fff;
+            width: 5.5rem;
+            height: 5rem;
+            top: -.5%;
+            right: -45%;
+            z-index: 2;
+            border: 2px solid black;
+               @include respond(phone){
+                font-size: 2rem;
+                width: 4rem;
+                height: 3.5rem;
+            
+    }
+        &--edit
+        {
+            position: relative;
+            top: 10%;
+            left: 4%;
+        }
+
+
+    }
+
+    &--closebtn
+    {
+        margin-bottom: 2%;
+    }
+
+    &--close
+    {
+        font-size: 25px;
+        font-weight: bold;
+        position: relative;
+        left: 105%;
+        top: -6%;
+         outline: none;
+         border: none;
+         background: transparent;
+         margin-bottom: 2%;
+         z-index: 4;
+        
+        @include respond(phone){
+            left: 90%;
+            top: 1%;
+}
+        
+
+        &:hover{
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+    }
+
+
+  input[type=text],[type=email],[type=date] {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 3rem;
+
+    @include respond(phone){
+        width: 100%;
+        margin-bottom: 1rem;
+}
+
+  }
+
+
+
+  input[type=text] select,textarea {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 18%;
+    @include respond(phone){
+        width: 100%;
+        margin-bottom: 1rem;
+}
+  }
+
+  
+  &_label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+
+  }
+
+
+
+
+  .dob{
+      padding-right: 2rem;
+  }
+
+  .dept
+  {
+    padding-right: 3rem;
+
+  }
+  
+  .ph
+  {
+    padding-right: 5.5rem;
+  }
+
+  .mail
+  {
+    padding-right: 7.5rem;
+
+  }
+
+  .add
+  {
+    padding-right: 6.5rem;
+
+  }
+
+  input[type=submit] {
+    background-color: rgb(17, 14, 233);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    width: 50%;
+    right: -25%;
+    
+    @include respond(phone){
+     
+       
+}
+  }
+  
+  input[type=submit]:hover {
+    background-color: #31b4e7;
+    box-shadow: 0 2px 20px rgba(33,33,33,.8);
+    transition: all .4s;
+  }
+    
+  }
+
+}
+//cover pic of the user//
+
+button:focus{
+    outline: none;
+    border: none;
+}
+
+
+
+//button to open the form
+.editbtn
+{
+    border-radius: 50%;
+    font-size: 35px;
+    position: relative;
+    left: 7%;
+    width: 6rem;
+    height: 6REM;
+    margin-top: 2rem;
+    color: $color-tertiary-dark;
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(33,33,33,.8);
+
+                      
+    @include respond(phone){
+
+        font-size: 25px;
+        left: 7%;
+        width: 5rem;
+        height: 5REM;
+        margin-top: 6rem;
+    }
+
+    &:hover{
+        transform: translateY(-.5rem);
+        transition: all .4s;
+
+        @include respond(phone){
+
+        transform: translateY(-1rem);
+        }
+    }
+
+}
+
+
+
+.coverpic
+{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    
+    
+    @include respond(phone){
+
+        height: 70vh;
+    }
+    
+    
+    &_img
+    {
+        
+        width: 100%;
+        height: 90vh;
+
+           
+    @include respond(phone){
+
+        width: 100%;
+        height: 70vh;    }
+
+
+        &--pic
+        {
+            width: 100%;
+            height: 90vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all .6s;
+            background-attachment: fixed;
+
+                    
+            @include respond(phone){
+
+          height: 70vh;
+            }
+        }
+     
+    }
+
+    &:hover {
+        .coverpic_name
+        {
+            opacity: 1;
+            transform: scale(1.2);
+            transition: all .6s;
+        }
+         
+        
+        .coverpic_img--pic
+        {
+           
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            transition: all .6s;
+
+        }
+       
+      }
+
+
+      &_namebox
+      {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+          
+      }
+
+      &_name{
+        color:$color-white;
+        text-transform: uppercase;
+        margin-bottom: 6rem;
+               
+    @include respond(phone){
+
+        margin-bottom: 0rem;
+    }
+        
+
+        &--main
+        {
+
+                    
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: 1rem; 
+    font-family: 'Roboto', sans-serif;
+
+        
+    @include respond(phone){
+
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: .5rem; 
+    }
+        }
+
+        &--sub
+        {
+            display: inline-block;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: .4rem;
+
+                  
+    @include respond(phone){
+
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: .2rem; 
+    }
+
+        }
+
+      }
+
+
+    
+
+      .upload_btn {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        left: 50%;
+        width: 5.5rem;
+        height: 8%;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 5px rgba($color-black,.600) ;
+        cursor: pointer;
+        margin-top: -3rem;
+        background-color: #fff;
+
+        @include respond(phone){
+
+            width: 5rem;
+            height: 5rem;
+            background-color:$color-white;
+            left: 45%;
+            top: -4%;
+            
+        }
+
+      }
+      
+      .btn {
+      
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &_icon
+        {
+            margin-left: 1.3rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+      }
+      
+      .upload_btn input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+
+
+}
+//coverpic part done//
+
+
+//user infoe and other details//
+
+.personalinfo
+{
+    
+    width: 100%;
+    margin: 30px auto;
+
+
+    display: grid;
+    grid-template-rows: repeat(1, minmax(44rem, min-content));
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-auto-rows: 44rem;
+    grid-row-gap: 6rem;
+    grid-column-gap: 5rem;
+
+    padding: 8rem;
+  
+    justify-content: center;
+    align-content: center;
+
+    @include respond(phone){
+
+    grid-template-rows: repeat(1, minmax(40rem, min-content));
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    grid-auto-rows: 40rem;
+
+    padding: 4rem;
+  
+    }
+
+    
+
+    .personalinfo_about
+    {
+        border: 1px solid rgb(250, 247, 247);
+        padding: 1rem;
+
+        &:hover{
+            box-shadow: 0 0 11px rgba(33,33,33,.2);
+            transition: all .8s;
+        }
+        &--title
+        {
+            font-weight: 600;
+            color: $color-tertiary-light;
+            letter-spacing: .2rem;
+            padding-left: 3rem;
+            font-family: 'Roboto', sans-serif;
+            @include respond(phone){
+
+                padding-left: 1rem;
+              
+                }
+        }
+
+        &--para
+        {
+            font-size: 16px;
+            color: rgb(87, 85, 85);
+            text-align: left;
+            letter-spacing: .4px;
+            line-height: 28px;
+            margin-top: 1rem;
+            font-weight: 500;
+            padding: 2rem;
+            @include respond(phone){
+
+               
+            font-size: 14px;
+            letter-spacing: .2px;
+            line-height: 20px;
+            margin-top: 1rem;
+            font-weight: 500;
+            padding: 1rem;
+              
+                }
+        }
+    }
+
+    .personalinfo_img
+    {
+        width: 100%;
+        height: 100%;
+        margin-left: 2rem;
+
+        @include respond(phone){
+
+            width: 80%;
+            margin-left: 2rem;
+          
+            }
+       
+
+        &--pic
+        {
+            margin-top: 1rem;
+            width: 35rem;
+            height: 40rem;
+            box-shadow: 1rem 1rem 1rem .4rem rgba(14, 15, 15, 0.600);
+            border: 4px solid $color-white;
+
+            @include respond(phone){
+
+                width: 30rem;
+                height: 37rem;
+              
+                }
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all .5s;
+            }
+        
+
+        
+        }
+
+
+    }
+
+    .personalinfo_details
+    {
+        border: 1px solid rgb(250, 247, 247);
+        padding :1rem;
+
+        &:hover{
+            transition: all .8s;
+            box-shadow: 0 0 11px rgba(33,33,33,.2);
+        }
+
+        &--title
+        {
+            font-weight: 600;
+            color: $color-tertiary-light;
+            letter-spacing: .1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        &--info
+        {
+            padding-left: 3rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
+            font-size: 16px;
+            color: rgb(110, 109, 109);
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgb(235, 230, 230);
+
+            
+            @include respond(phone){
+
+                padding-left: 1rem;
+                padding-bottom: 0rem;
+               
+              
+                }
+
+          
+
+            &--text
+            {
+                text-transform: none;
+                margin-left: 1rem;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                color: $color-black;
+                @include respond(phone){
+                    font-size: 16px;
+                  
+                    }
+
+
+            }
+        }
+        
+    }
+}
+
+//user info done//
+
+
+//conatct deatils//
+.contact
+{
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to right bottom,rgba(22, 21, 24, .700),rgba(14, 15, 15, .700)),url("../img/contact.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 10rem;
+
+          
+  
+
+
+
+
+    
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(1rem, max-content));
+
+  @include respond(phone){
+    height: 60%;
+    padding-bottom: 5rem;
+
+  
+  
+    }
+
+
+
+   &_title
+   {
+       text-align: center;
+       font-size: 40px;
+       color: $color-white;
+       font-weight: bold;
+       letter-spacing: .4rem;
+       padding: 5rem;
+       margin-bottom: 2rem;
+
+        
+    @include respond(phone){
+        margin-bottom: 1rem;
+        padding: 2rem;
+        font-size: 30px;
+        color: $color-white;
+        font-weight: bold;
+        letter-spacing: .4rem;
+  
+      
+      
+        }
+
+   }
+
+   &_items
+   {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(1, minmax(5rem, min-content));
+    grid-template-columns: repeat(auto-fill, minmax(400px,450px));
+
+
+    grid-row-gap: 1rem;
+
+    justify-items: center;
+    justify-content: center;
+
+  
+
+
+    color: $color-white;
+    font-size: 38px;
+
+    @include respond(phone){
+        font-size: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(350px,450px));
+
+      
+        }
+
+
+
+   
+
+    &--call
+    {
+        width: 100%;
+        text-align: center;
+        padding: 3rem;
+        @include respond(phone){
+            padding: 2rem;
+            width: 90%;
+    
+          
+            }
+
+        &:hover{
+            
+            box-shadow: inset 0 0 0 10px white;
+            transition: all .8s;
+            background-color:rgba(0, 0, 0, 0.459);
+            @include respond(phone){
+                box-shadow: inset 0 0 0 5px white;
+              
+                }
+        }
+
+        &--1
+        {
+            font-size: 25px;
+            letter-spacing: .3rem;
+            @include respond(phone){
+                font-size: 18px;
+              
+                }
+         
+
+        }
+    }
+
+    
+    &--location
+    {
+        width: 100%;
+        text-align: center;
+        padding: 3rem;
+        @include respond(phone){
+            padding: 2rem;
+            width: 90%;
+    
+          
+            }
+
+        
+        &:hover{
+            
+            box-shadow: inset 0 0 0 10px white;
+            transition: all .8s;
+            background-color:rgba(0, 0, 0, 0.459);
+            @include respond(phone){
+                box-shadow: inset 0 0 0 5px white;
+              
+                }
+        }
+
+        &--1
+        {
+            font-size: 25px;
+            letter-spacing: .3rem;
+            line-height: 2.5rem;
+            @include respond(phone){
+                font-size: 18px;
+              
+                }
+
+        }
+    }
+
+    &--mail
+    {
+      
+        width: 100%;
+        text-align: center;
+        padding: 3rem;
+        @include respond(phone){
+            padding: 2rem;
+            width: 90%;
+    
+          
+            }
+
+        
+        &:hover{
+            
+            box-shadow: inset 0 0 0 10px white;
+            transition: all .8s;
+            background-color:rgba(0, 0, 0, 0.459);
+            @include respond(phone){
+                box-shadow: inset 0 0 0 5px white;
+              
+                }
+        }
+
+        &--1
+        {
+            font-size: 25px;
+            letter-spacing: .3rem;
+            @include respond(phone){
+                font-size: 18px;
+              
+                }
+
+        }
+    }
+
+}
+}
+

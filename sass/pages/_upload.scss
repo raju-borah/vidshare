@@ -1,0 +1,30 @@
+
+// for the close button in the upload form
+.btn--close {
+  text-decoration: none;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 0;
+  left: 40%;
+  z-index: 1;
+  background: transparent;
+  border:none;
+  outline: none;
+  color: $color-red;
+  font-weight: 600;
+  font-size: 4rem;
+  &:hover{
+    transform: translateY(-.3rem);
+  }
+}
+// custom text
+.custom-text {
+
+  width: 200px;
+  font-size: 2rem;
+  margin: 1rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

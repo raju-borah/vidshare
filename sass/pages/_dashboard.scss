@@ -1,0 +1,134 @@
+.dashboard {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem;
+  &__header {
+    background-image: linear-gradient(to right, rgba($color-tertiary-light, 0.88), rgba($color-tertiary-dark-1, 0.88));
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(phone) {
+      padding: 0.62rem;
+    }
+  }
+  &__title {
+    margin-left: 8rem;
+    color: $color-white;
+
+    @include respond(phone) {
+      margin-left: 1.5rem;
+    }
+  }
+  // grid layout for the dashboard
+  &__vcontainer {
+    display: grid;
+    justify-content: center;
+
+    grid-template-rows: repeat(minmax(150px, min-content));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 350px));
+    grid-gap: 8rem;
+
+    padding: 10rem;
+    padding-top: 6rem;
+
+    &--addvideo {
+      padding: 5rem;
+      grid-column-gap: 13rem;
+    }
+    @include respond(tab-land) {
+      padding: 4rem;
+      grid-gap: 6rem;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 350px));
+    }
+    @include respond(phone) {
+      padding: 2rem;
+    }
+  }
+  // the video card stored in video--card.scss--->
+}
+// the delete button is hidden the pointer is hover to the video division
+.videodelete {
+  background: transparent;
+  color: $color-white;
+  padding-top: 0.77rem;
+  font-weight: bold;
+  display: none;
+}
+
+// for the timpestamp of the video
+.timestamp {
+  font-size: 1.4rem;
+&s{
+  
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+    @include respond(phone){
+    width: 120px;
+    font-size: 1.58rem;
+
+    }
+}
+ 
+}
+
+// for the upload button
+.floating--btn {
+  position: absolute;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  top: 12%;
+  right: 2%;
+  z-index: 1;
+  position: fixed;
+  font-size: 2.3rem;
+  outline: none;
+  color: $color-white;
+  background-color: $color-grey-dark-3;
+  &:hover {
+    background-color: $color-tertiary-dark-1;
+    transform: translateY(-0.2rem);
+  }
+  // larger screen mixin at first then the smaller
+  @include respond(tab-land) {
+    position: sticky;
+    float: right;
+    padding: 0.33rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+    margin-top: -0.4rem;
+    padding: 0.28rem;
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+}
+
+// playlist
+.playlist--details {
+  float: right;
+  width: 45%;
+  height: 100%;
+  color: white;
+  background-color: rgba($color-black, 0.66);
+  box-shadow: 0rem 0rem 1rem rgba(#1e2a3b, 0.66);
+}
+
+.dashboard--option {
+  @include respond(phone) {
+    display: none;
+  }
+
+  &--1 {
+    display: none;
+    @include respond(phone) {
+      display: inline;
+    }
+  }
+}

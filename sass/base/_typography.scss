@@ -1,0 +1,43 @@
+body {
+  font-weight: 400;
+  /* font-size: 16px;*/
+  line-height: 1.7;
+  // color:$color-grey-dark;
+  font-family: 'Averia Serif Libre';
+
+}
+
+.heading {
+  position: absolute;
+  top: 1%;
+  height: 10rem;
+  width: 100%;
+
+  background-color: $color-white;
+
+  // for login and signup
+  &_tag {
+    font-size: 4rem;
+    //text-shadow: 0 1rem 1rem rgba($color-black,0.48);
+    padding: 1rem;
+    border-bottom: 0.4rem solid rgba($color-primary-dark, 0.98);
+    display: inline;
+
+    @include respond(phone){
+      font-size: 30px;
+    }
+
+  }
+
+  &__title {
+    color: $color-black;
+    padding: 1rem;
+    float: left;
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+}
+

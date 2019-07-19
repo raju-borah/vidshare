@@ -1,0 +1,343 @@
+.footer
+{
+    position: relative;
+
+    //for the background image in footer section
+    &__back
+    {
+        background-image: linear-gradient(to right bottom,rgba($color-black, 0.800),rgba($color-black, 0.500)),url('../img/foot.jpg');
+        width: 100%;//width of the division
+        height: 55rem;//the heightof the divion 
+        background-size: 100% 100%;//height and width of the image to fit in the conatiner
+        background-repeat: no-repeat;//do not repeat the image
+
+        @include respond(phone){
+            height: 50rem;
+            background-color:black;
+            background-image:none;
+          
+        }
+    }
+
+
+
+    //for the footer logo
+    &__logo
+    {
+        position: absolute;
+        top: 5rem;
+        font-size: 200px;
+        left: 42%;
+       
+
+        @include respond(phone){
+            font-size: 100px;
+            top: -2rem;
+            color: white;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+
+
+    }
+
+    //name of the logo
+    &__logo-name
+    {
+        position: absolute;
+        color: $color-tertiary-dark;
+        font-size: 5rem;
+        top: 25rem;
+        left: 4rem;
+
+        @include respond(phone){
+            font-size: 35px;
+            left:0%;
+            top: 11.5rem;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+
+
+    //conatact us icons
+    &__communication
+    {
+
+        font-size: 5rem;
+        @include respond(phone){
+            font-size: 35px;
+            text-align: center;
+           
+        }
+
+        //contact us text
+        &--text
+        {
+            position:absolute;
+            top: 20%;
+            left: 10%;
+            color: $color-white;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: .2rem;
+            transform: rotate(7deg);
+
+            @include respond(phone){
+                font-size: 20px;
+                transform: rotate(0);
+                font-weight: 200;
+                top: 70%;
+                left: 0%;
+                width: 100%;
+               
+            }
+            
+        }
+
+
+        //call icon
+        &--call
+        {
+            position:absolute;
+            color: $color-tertiary-dark;
+            top: 30%;
+            left: 15%;
+            transition: all .4s;
+            @include respond(phone){
+                top: 80.5%;
+                width: 15%;
+                left: 7%;
+                
+               
+            }
+
+            //to translate the icon in y direction
+            &:hover{
+                transform: translateY(-2rem);
+            }
+
+        }
+
+        //call icon details
+        &--callinfo
+        {
+            font-size: 3rem;
+            background-color:rgba($color-black,.8);
+            border-radius: 2rem;
+            visibility: hidden;
+            
+            color: $color-white;
+            transition: all .4s;
+            @include respond(phone){
+                visibility: visible;
+                background-color:transparent;
+                font-size: 12px;
+                font-weight: 100;
+             
+            
+         
+              
+               
+            }
+        }
+
+        //when call icon is hovered numbered is shown
+        &--call:hover &--callinfo
+        {
+            visibility: visible;
+            color: $color-white;
+        }
+
+
+
+
+        //location icon
+        &--location
+        {
+            position:absolute;
+            color: $color-primary-dark;
+            top: 50%;
+            left: 13%;
+            transition: all .4s;
+
+            @include respond(phone){
+                top: 79%;
+                right: 14%;
+              
+               
+            }
+
+            &:hover{
+                transform: translateY(-2rem);
+            }
+        }
+
+        &--locationinfo
+        {
+            font-size: 3rem;
+            background-color:rgba($color-black,.8);
+            border-radius: 2rem;
+            visibility: hidden;
+            transition: all .4s;
+            color: $color-white;
+            padding: .7rem;
+            @include respond(phone){
+                font-size: 12px;
+                font-weight: 100;
+                visibility: visible;
+                background-color:transparent;
+            
+               
+            }
+        }
+
+        &--location:hover &--locationinfo
+        {
+            visibility: visible;
+            color: $color-white;
+        }
+
+
+
+        //mail icon
+        &--mail
+        {
+            position:absolute;
+            color: red;
+            top: 70%;
+            left: 10%;
+            transition: all .4s;
+
+            @include respond(phone){
+                text-align: center;
+                top: 79%;
+                left: 0%;
+                margin-left: 70%;
+          
+               
+            }
+
+            &:hover{
+                transform: translateY(-2rem);
+            }
+
+        }
+        &--mailinfo
+        {
+            font-size: 3rem;
+            background-color:rgba($color-black,.8);
+            border-radius: 2rem;
+            visibility: hidden;
+            transition: all .4s;
+            padding: .7rem;
+            color: $color-white;
+            @include respond(phone){
+                display: block;
+                font-size: 12px;
+                font-weight: 100;
+                visibility: visible;
+                background-color:transparent;
+              
+            
+               
+            }
+        }
+
+        &--mail:hover &--mailinfo
+        {
+            visibility: visible;
+            color: $color-white;
+        }
+
+    }
+
+    
+    //social icons
+    &__social
+    {
+
+        &--text
+        {
+            position: absolute;
+            color:$color-white;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: .5rem;
+            right: 10%;
+            top: 10rem;
+            @include respond(phone){
+                font-size: 20px;
+                transform: rotate(0);
+                font-weight: 200;
+                top: 35%;
+                left: 10%;
+                text-align: center;
+            
+            }
+         
+            
+
+        }
+
+
+        &--fb
+        {
+            position: absolute;
+            color: $color-tertiary-dark;
+            font-size: 6rem;
+            right: 20%;
+            top: 24%;
+            @include respond(phone){
+                font-size: 45px;
+                left: -32%;
+                top: 45%;
+            
+               
+            }
+
+
+        }
+
+
+        &--twit
+        {
+            position: absolute;
+            color: $color-tertiary-light;
+            font-size: 6rem;
+            right: 18%;
+            top: 40%;
+            @include respond(phone){
+                font-size: 45px;
+                left: 18%;
+                top: 45%;
+            
+               
+            }
+
+
+        }
+
+
+        &--link
+        {
+
+            position: absolute;
+            color: $color-tertiary-light;
+            font-size: 6rem;
+            right: 16%;
+            top: 55%;
+            @include respond(phone){
+                font-size: 45px;
+                left: 70%;
+                top: 45%;
+            
+               
+            }
+
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.club
+{
+    &__heading
+    { 
+          @include head;
+          background-image: linear-gradient(120deg, 
+          $color-secondary-dark 50%,
+          rgba($color-secondary-dark,.3) 30%);
+
+    }
+
+    &__title
+    {
+
+     @include title;
+    }
+
+    &__more
+    {
+
+        @include more;
+    }
+
+    
+    &__more:hover::after
+    {
+        width: 100%;
+    }
+}
